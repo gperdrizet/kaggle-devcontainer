@@ -1,10 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-	// Container definition for data science development environment (NVIDIA GPU)
-	// Based on nvidia/cuda:12.8.1-runtime-ubuntu24.04 with data science packages
-	// See here: https://hub.docker.com/r/gperdrizet/datascience-nvidia
-	"name": "DataScience NVIDIA",
-	"image": "gperdrizet/datascience-nvidia",
+	// Container definition for Kaggle competition development environment (NVIDIA GPU)
+	// Mirrors the Kaggle notebook GPU environment: pinned package versions from the
+	// Kaggle session pip freeze, CUDA 12.8, custom PyTorch 2.10.0 wheel with Pascal
+	// support (works on P100/GTX 10xx, unlike Kaggle's own stock wheel), plus RAPIDS.
+	// See here: https://hub.docker.com/r/gperdrizet/kaggle-nvidia
+	"name": "Kaggle NVIDIA",
+	"image": "gperdrizet/kaggle-nvidia",
     "runArgs": [
 		"--gpus", "all",              // Enable all available GPUs in the container
 		"--pid=host",                 // Use host PIDs, needed for nvidia-smi process list

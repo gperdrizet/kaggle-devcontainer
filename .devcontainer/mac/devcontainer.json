@@ -1,12 +1,13 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-	// Container definition for data science development environment (Mac / Apple Silicon)
-	// Based on python:3.12-slim, built as linux/arm64. Runs natively on M1/M2/M3 Macs
+	// Container definition for Kaggle competition development environment (Mac / Apple Silicon)
+	// Mirrors the Kaggle notebook CPU environment: pinned package versions from the
+	// Kaggle session pip freeze. Built as linux/arm64, runs natively on M1/M2/M3 Macs
 	// via Docker Desktop — no Rosetta emulation. No GPU acceleration (Metal/MPS not
 	// accessible inside Docker containers).
-	// See here: https://hub.docker.com/r/gperdrizet/datascience-mac
-	"name": "DataScience Mac",
-	"image": "gperdrizet/datascience-mac",
+	// See here: https://hub.docker.com/r/gperdrizet/kaggle-mac
+	"name": "Kaggle Mac",
+	"image": "gperdrizet/kaggle-mac",
     "runArgs": [
 		"--platform", "linux/arm64",  // Run as ARM64 image (native on Apple Silicon)
 		"--network=bridge"            // Explicitly use bridge network for internet access

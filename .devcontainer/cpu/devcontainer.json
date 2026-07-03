@@ -1,10 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-	// Container definition for data science development environment (CPU)
-	// Based on python:3.12-slim with data science packages. CPU only, no GPU dependencies.
-	// See here: https://hub.docker.com/r/gperdrizet/datascience-cpu
-	"name": "DataScience CPU",
-	"image": "gperdrizet/datascience-cpu",
+	// Container definition for Kaggle competition development environment (CPU)
+	// Mirrors the Kaggle notebook CPU environment: pinned package versions from the
+	// Kaggle session pip freeze. Based on python:3.12-slim. CPU only, no GPU dependencies.
+	// See here: https://hub.docker.com/r/gperdrizet/kaggle-cpu
+	"name": "Kaggle CPU",
+	"image": "gperdrizet/kaggle-cpu",
     "runArgs": [
 		"--network=bridge"            // Explicitly use bridge network for internet access
 	],
